@@ -3,7 +3,7 @@ const express = require("express");
 // import cors from "cors";
 const cors = require("cors");
 // import cookieParser from "cookie-parser";
-const cookieParser = require("cookie-parser");
+// const cookieParser = require("cookie-parser");
 
 // import initBannerRouter from "./route/banner";
 // const initBannerRouter = require("./route/banner");
@@ -34,7 +34,7 @@ app.use(
   })
 );
 
-app.use(cookieParser());
+// app.use(cookieParser());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
