@@ -26,13 +26,13 @@ const connectDB = require("./src/config/connectDB");
 const app = express();
 const port = process.env.PORT || 7777;
 
-app.use(
-  cors({
-    origin: "http://localhost:3000",
-    methods: ["POST", "PUT", "GET", "DELETE"],
-    credentials: true,
-  })
-);
+// app.use(
+//   cors({
+//     origin: "http://localhost:3000",
+//     methods: ["POST", "PUT", "GET", "DELETE"],
+//     credentials: true,
+//   })
+// );
 
 // app.use(cookieParser());
 app.use(express.json());
@@ -50,7 +50,7 @@ initBannerRouter(app);
 // initPaymentRouter(app);
 // initOrderRouter(app);
 
-app.use((req, res) => res.json("server on"));
+app.get("/", (req, res) => res.json("server on"));
 
 connectDB();
 
